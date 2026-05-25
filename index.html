@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Gupy Eco · Web UI Kit</title>
+<meta name="viewport" content="width=1440">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="screens.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" src="components.jsx"></script>
+<script type="text/babel" src="LoginScreen.jsx"></script>
+<script type="text/babel" src="JobDirectory.jsx"></script>
+<script type="text/babel" src="JobDetail.jsx"></script>
+<script type="text/babel" src="UserManagement.jsx"></script>
+
+<script type="text/babel">
+  const { useState } = React;
+
+  function App() {
+    const [screen, setScreen] = useState("jobs"); // login | jobs | job | users
+    const [openJob, setOpenJob] = useState(null);
+    const user = { name: "Ana Silva", color: "#003CFD" };
+
+    if (screen === "login") {
+      return <LoginScreen onLogin={() => setScreen("jobs")} />;
+    }
+    if (screen === "job" && openJob) {
+      return <JobDetail job={openJob} onBack={() => setScreen("jobs")} user={user} />;
+    }
+    if (screen === "users") {
+      return <UserManagement user={user} />;
+    }
+    // default — jobs
+    return <JobDirectory
+      user={user}
+      onLogout={() => setScreen("login")}
+      onOpenJob={(j) => { setOpenJob(j); setScreen("job"); }}
+    />;
+  }
+
+  // Tiny screen switcher (dev affordance)
+  function Root() {
+    const [screen, setScreen] = useState("jobs");
+    const [openJob, setOpenJob] = useState(null);
+    const user = { name: "Ana Silva", color: "#003CFD" };
+
+    let body;
+    if (screen === "login") body = <LoginScreen onLogin={() => setScreen("jobs")} />;
+    else if (screen === "job" && openJob) body = <JobDetail job={openJob} onBack={() => setScreen("jobs")} user={user} />;
+    else if (screen === "users") body = <UserManagement user={user} />;
+    else body = <JobDirectory user={user} onLogout={() => setScreen("login")} onOpenJob={(j) => { setOpenJob(j); setScreen("job"); }} />;
+
+    return (<>
+      {body}
+      <div style={{
+        position: "fixed", bottom: 16, right: 16, background: "#252E41", color: "#fff",
+        borderRadius: 100, padding: "6px 8px", display: "flex", gap: 4, boxShadow: "var(--eco-elev-8)", zIndex: 9999,
+        fontFamily: "var(--eco-font-sans)", fontSize: 12, fontWeight: 600
+      }}>
+        {[
+          { id: "login", label: "Login" },
+          { id: "jobs", label: "Vagas" },
+          { id: "users", label: "Usuários" },
+        ].map(s => (
+          <button key={s.id} onClick={() => setScreen(s.id)} style={{
+            border: "none", cursor: "pointer", padding: "6px 12px", borderRadius: 100,
+            background: screen === s.id ? "#003CFD" : "transparent", color: "#fff",
+            fontSize: 12, fontWeight: 600, fontFamily: "inherit"
+          }}>{s.label}</button>
+        ))}
+      </div>
+    </>);
+  }
+
+  ReactDOM.createRoot(document.getElementById("root")).render(<Root />);
+</script>
+</body>
+</html>

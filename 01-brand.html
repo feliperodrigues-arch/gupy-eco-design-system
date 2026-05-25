@@ -1,0 +1,63 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{background:transparent;margin:0}
+  body{padding:24px;font-family:var(--eco-font-sans);color:var(--eco-text-primary)}
+  .brand-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:20px;gap:24px}
+  .tag{font:600 11px/1 var(--eco-font-sans);color:var(--eco-text-secondary);text-transform:uppercase;letter-spacing:0.10em;margin-bottom:8px}
+  .name{font:700 32px/1 var(--eco-font-sans);letter-spacing:-0.01em}
+  .desc{font:400 13px/1.4 var(--eco-font-sans);color:var(--eco-text-secondary);max-width:520px;margin-top:8px}
+  .grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:12px}
+  .swatch{display:flex;flex-direction:column;border-radius:12px;overflow:hidden;border:1px solid var(--eco-border-subtle)}
+  .stage{aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;padding:18px}
+  .stage img{max-width:78%;max-height:60%;object-fit:contain}
+  .stage.mark img{max-width:38%;max-height:78%}
+  .stage.navy{background:#0B1A3D}
+  .stage.cobalt{background:#FFFFFF;border-bottom:1px solid var(--eco-border-subtle)}
+  .stage.white{background:var(--eco-cobalt-700)}
+  .stage.paper{background:#F3F4F7}
+  .label{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:#fff;font:500 12px/1 var(--eco-font-sans)}
+  .label .var{color:var(--eco-text-secondary);font:500 11px/1 var(--eco-font-mono)}
+  .row-title{font:600 13px/1 var(--eco-font-sans);color:var(--eco-text-secondary);text-transform:uppercase;letter-spacing:0.08em;margin:18px 0 8px}
+</style></head><body>
+
+<div class="brand-head">
+  <div>
+    <div class="tag">Eco Design System</div>
+    <div class="name">Gupy</div>
+    <div class="desc">Multi-product HR-tech library · Recrutamento, Admissão, Performance, Engajamento, EduCorp</div>
+  </div>
+</div>
+
+<div class="row-title">Wordmark</div>
+<div class="grid">
+  <div class="swatch">
+    <div class="stage navy"><img src="../assets/gupy-logo-white.png" alt="Gupy"></div>
+    <div class="label"><span>Branco / sobre escuro</span><span class="var">gupy-logo-white.png</span></div>
+  </div>
+  <div class="swatch">
+    <div class="stage cobalt"><img src="../assets/gupy-logo-cobalt.png" alt="Gupy"></div>
+    <div class="label"><span>Azul Impulso</span><span class="var">gupy-logo-cobalt.png</span></div>
+  </div>
+  <div class="swatch">
+    <div class="stage paper"><img src="../assets/gupy-logo-navy.png" alt="Gupy"></div>
+    <div class="label"><span>Azul Gupy</span><span class="var">gupy-logo-navy.png</span></div>
+  </div>
+</div>
+
+<div class="row-title">Símbolo (G)</div>
+<div class="grid">
+  <div class="swatch">
+    <div class="stage navy mark"><img src="../assets/gupy-mark-white.png" alt="Gupy"></div>
+    <div class="label"><span>Branco</span><span class="var">gupy-mark-white.png</span></div>
+  </div>
+  <div class="swatch">
+    <div class="stage cobalt mark"><img src="../assets/gupy-mark-cobalt.png" alt="Gupy"></div>
+    <div class="label"><span>Azul Impulso</span><span class="var">gupy-mark-cobalt.png</span></div>
+  </div>
+  <div class="swatch">
+    <div class="stage paper mark"><img src="../assets/gupy-mark-navy.png" alt="Gupy"></div>
+    <div class="label"><span>Azul Gupy</span><span class="var">gupy-mark-navy.png</span></div>
+  </div>
+</div>
+
+</body></html>

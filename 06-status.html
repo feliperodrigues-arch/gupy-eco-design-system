@@ -1,0 +1,30 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>html,body{background:transparent;margin:0}body{padding:18px 22px;font-family:var(--eco-font-sans)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.s{border-radius:8px;overflow:hidden;border:1px solid rgba(21,23,35,0.08);background:#fff}
+.s .bar{height:14px}
+.s .body{padding:10px 12px;display:flex;flex-direction:column;gap:4px}
+.s .role{font:500 10px/1 var(--eco-font-sans);text-transform:uppercase;letter-spacing:0.08em;color:var(--eco-text-tertiary)}
+.s .name{font:600 14px/1 var(--eco-font-sans);color:var(--eco-text-primary);display:flex;align-items:center;gap:8px}
+.s .dot{width:10px;height:10px;border-radius:50%}
+.s .hex{font:500 11px/1 var(--eco-font-mono);color:var(--eco-text-tertiary)}
+</style></head><body>
+<div class="grid">
+  <div class="s">
+    <div class="bar" style="background:#288636"></div>
+    <div class="body"><div class="role">Success</div><div class="name"><div class="dot" style="background:#288636"></div>green.600</div><div class="hex">#288636</div></div>
+  </div>
+  <div class="s">
+    <div class="bar" style="background:#BA121E"></div>
+    <div class="body"><div class="role">Error</div><div class="name"><div class="dot" style="background:#BA121E"></div>red.600</div><div class="hex">#BA121E</div></div>
+  </div>
+  <div class="s">
+    <div class="bar" style="background:#E4851C"></div>
+    <div class="body"><div class="role">Warning</div><div class="name"><div class="dot" style="background:#E4851C"></div>yellow.500</div><div class="hex">#E4851C</div></div>
+  </div>
+  <div class="s">
+    <div class="bar" style="background:#0D79BC"></div>
+    <div class="body"><div class="role">Info</div><div class="name"><div class="dot" style="background:#0D79BC"></div>lightBlue.500</div><div class="hex">#0D79BC</div></div>
+  </div>
+</div>
+</body></html>

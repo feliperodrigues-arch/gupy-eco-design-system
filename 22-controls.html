@@ -1,0 +1,37 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>html,body{background:transparent;margin:0}body{padding:20px 24px;font-family:var(--eco-font-sans)}
+.row{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.row + .row{margin-top:18px}
+.label{font:500 10px/1 var(--eco-font-mono);color:var(--eco-text-tertiary);min-width:80px}
+.cb{display:inline-flex;align-items:center;gap:8px;font:400 14px/20px var(--eco-font-sans);color:var(--eco-text-primary);cursor:pointer}
+.box{width:18px;height:18px;border:2px solid rgba(21,23,35,0.6);border-radius:2px;display:inline-flex;align-items:center;justify-content:center}
+.box.checked{background:#003CFD;border-color:#003CFD;color:#fff}
+.box .chk{font-family:"Material Symbols Rounded";font-size:14px}
+.box.indet{background:#003CFD;border-color:#003CFD}
+.box.indet:after{content:"";width:10px;height:2px;background:#fff;border-radius:1px}
+.rb{display:inline-flex;align-items:center;gap:8px;font:400 14px/20px var(--eco-font-sans);color:var(--eco-text-primary)}
+.rad{width:18px;height:18px;border:2px solid rgba(21,23,35,0.6);border-radius:50%;display:inline-flex;align-items:center;justify-content:center}
+.rad.on{border-color:#003CFD}
+.rad.on:after{content:"";width:10px;height:10px;background:#003CFD;border-radius:50%}
+.sw{position:relative;width:40px;height:22px;background:rgba(21,23,35,0.38);border-radius:100px;transition:background 150ms}
+.sw.on{background:#003CFD}
+.sw .knob{position:absolute;top:2px;left:2px;width:18px;height:18px;background:#fff;border-radius:50%;box-shadow:0 1px 3px rgba(0,0,0,0.3);transition:left 150ms}
+.sw.on .knob{left:20px}
+.sw-wrap{display:inline-flex;align-items:center;gap:10px;font:400 14px/20px var(--eco-font-sans)}
+</style></head><body>
+<div class="row"><span class="label">checkbox</span>
+  <span class="cb"><span class="box"></span>Não definido</span>
+  <span class="cb"><span class="box checked"><span class="chk">check</span></span>Selecionado</span>
+  <span class="cb"><span class="box indet"></span>Parcial</span>
+  <span class="cb" style="color:rgba(21,23,35,0.38)"><span class="box" style="border-color:rgba(21,23,35,0.38)"></span>Desabilitado</span>
+</div>
+<div class="row"><span class="label">radio</span>
+  <span class="rb"><span class="rad"></span>Mensal</span>
+  <span class="rb"><span class="rad on"></span>Anual</span>
+  <span class="rb" style="color:rgba(21,23,35,0.38)"><span class="rad" style="border-color:rgba(21,23,35,0.38)"></span>Personalizado</span>
+</div>
+<div class="row"><span class="label">switch</span>
+  <span class="sw-wrap"><span class="sw"><span class="knob"></span></span>Notificações</span>
+  <span class="sw-wrap"><span class="sw on"><span class="knob"></span></span>Receber e-mails</span>
+</div>
+</body></html>

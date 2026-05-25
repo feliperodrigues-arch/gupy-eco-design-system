@@ -1,0 +1,30 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>html,body{background:transparent;margin:0}body{padding:20px 24px;font-family:var(--eco-font-sans)}
+.field{display:flex;flex-direction:column;gap:6px}
+.label{font:400 12px/16px var(--eco-font-sans);color:var(--eco-text-secondary)}
+.input{height:48px;border:1px solid rgba(21,23,35,0.23);border-radius:4px;padding:0 14px;font:400 16px/1 var(--eco-font-sans);color:var(--eco-text-primary);background:#fff;transition:border-color 150ms,box-shadow 150ms}
+.input:focus{outline:none;border-color:#003CFD;box-shadow:0 0 0 1px #003CFD inset}
+.input.error{border-color:#BA121E}
+.helper{font:400 11px/14px var(--eco-font-sans);color:var(--eco-text-tertiary)}
+.helper.err{color:#BA121E}
+.row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.fld-wrap{display:flex;flex-direction:column;gap:4px}
+.adorn{position:relative}
+.adorn .icon{position:absolute;top:50%;left:14px;transform:translateY(-50%);font-family:"Material Symbols Rounded";font-size:20px;color:var(--eco-text-tertiary)}
+.adorn .input{padding-left:42px}
+</style></head><body>
+<div class="row">
+  <div class="fld-wrap">
+    <div class="field"><div class="label">E-mail</div><input class="input" value="ana.silva@gupy.io"></div>
+    <div class="helper">Usaremos para login</div>
+  </div>
+  <div class="fld-wrap">
+    <div class="field"><div class="label">Busca</div><div class="adorn"><span class="icon">search</span><input class="input" value="Engenheiro Sênior"></div></div>
+    <div class="helper">12 vagas encontradas</div>
+  </div>
+  <div class="fld-wrap">
+    <div class="field"><div class="label">Telefone</div><input class="input error" value="(11) 9999"></div>
+    <div class="helper err">Número incompleto</div>
+  </div>
+</div>
+</body></html>

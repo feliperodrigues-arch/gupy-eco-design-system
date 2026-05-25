@@ -1,0 +1,38 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>html,body{background:transparent;margin:0}body{padding:20px 24px;font-family:var(--eco-font-sans)}
+.row{display:flex;gap:12px;align-items:stretch}
+.s{flex:1;border-radius:8px;border:1px solid rgba(21,23,35,0.08);overflow:hidden;background:#fff}
+.s .base{height:60px;background:#003CFD;position:relative;display:flex;align-items:flex-end;padding:8px}
+.s .overlay{position:absolute;inset:0}
+.s .role{font:600 11px/1 var(--eco-font-sans);color:#fff;position:relative;z-index:1}
+.s .meta{padding:8px 10px;display:flex;flex-direction:column;gap:2px}
+.s .name{font:600 12px/1 var(--eco-font-sans)}
+.s .val{font:500 10px/1 var(--eco-font-mono);color:var(--eco-text-tertiary)}
+</style></head><body>
+<div class="row">
+  <div class="s">
+    <div class="base"><div class="role">Default</div></div>
+    <div class="meta"><div class="name">Base</div><div class="val">no overlay</div></div>
+  </div>
+  <div class="s">
+    <div class="base"><div class="overlay" style="background:rgba(0,0,0,0.04)"></div><div class="role">Hover</div></div>
+    <div class="meta"><div class="name">+ Hover</div><div class="val">4% black</div></div>
+  </div>
+  <div class="s">
+    <div class="base"><div class="overlay" style="background:rgba(0,0,0,0.08)"></div><div class="role">Selected</div></div>
+    <div class="meta"><div class="name">+ Selected</div><div class="val">8% black</div></div>
+  </div>
+  <div class="s">
+    <div class="base"><div class="overlay" style="background:rgba(0,0,0,0.12);outline:2px solid #003CFD;outline-offset:-4px"></div><div class="role">Focus</div></div>
+    <div class="meta"><div class="name">+ Focus</div><div class="val">12% + ring</div></div>
+  </div>
+  <div class="s">
+    <div class="base" style="background:#063BC1"><div class="role">Pressed</div></div>
+    <div class="meta"><div class="name">+ Pressed</div><div class="val">cobalt.800</div></div>
+  </div>
+  <div class="s">
+    <div class="base" style="background:rgba(21,23,35,0.12)"><div class="role" style="color:rgba(21,23,35,0.38)">Disabled</div></div>
+    <div class="meta"><div class="name">Disabled</div><div class="val">12% gray</div></div>
+  </div>
+</div>
+</body></html>

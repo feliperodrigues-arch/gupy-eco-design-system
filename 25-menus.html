@@ -1,0 +1,28 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>html,body{background:transparent;margin:0}body{padding:24px;font-family:var(--eco-font-sans);background:#F3F4F7}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.pop{background:#fff;border-radius:8px;box-shadow:var(--eco-elev-8);padding:8px 0;width:100%}
+.item{display:flex;align-items:center;gap:12px;padding:10px 16px;font:400 14px/20px var(--eco-font-sans);color:var(--eco-text-primary);cursor:pointer}
+.item:hover{background:rgba(21,23,35,0.04)}
+.item .ico{font-family:"Material Symbols Rounded";font-size:20px;color:var(--eco-text-secondary)}
+.item.sel{background:rgba(0,60,253,0.08);color:#003CFD}
+.item.sel .ico{color:#003CFD}
+.div{height:1px;background:rgba(21,23,35,0.08);margin:6px 0}
+.dest{background:#fff;border-radius:8px;box-shadow:var(--eco-elev-8);padding:14px 16px}
+.dest .title{font:600 14px/20px var(--eco-font-sans);margin-bottom:4px}
+.dest .body{font:400 13px/18px var(--eco-font-sans);color:var(--eco-text-secondary)}
+</style></head><body>
+<div class="grid">
+  <div class="pop">
+    <div class="item"><span class="ico">person</span>Meu perfil</div>
+    <div class="item sel"><span class="ico">groups</span>Equipe</div>
+    <div class="item"><span class="ico">settings</span>Configurações</div>
+    <div class="div"></div>
+    <div class="item"><span class="ico">logout</span>Sair</div>
+  </div>
+  <div class="dest" style="background:#252E41;color:#fff">
+    <div class="title">Convidar usuário</div>
+    <div class="body" style="color:rgba(255,255,255,0.7)">Envie um link para que ele se cadastre no Gupy R&amp;S.</div>
+  </div>
+</div>
+</body></html>

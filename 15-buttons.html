@@ -1,0 +1,38 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>html,body{background:transparent;margin:0}body{padding:24px;font-family:var(--eco-font-sans)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:36px;padding:0 16px;border-radius:100px;font:500 14px/1 "Roboto",var(--eco-font-sans);letter-spacing:0.02em;cursor:pointer;border:none;text-transform:none;transition:all 150ms var(--eco-ease-standard)}
+.btn.lg{height:42px;padding:0 22px;font-size:15px}
+.btn.sm{height:30px;padding:0 12px;font-size:13px}
+.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.row + .row{margin-top:14px}
+.contained{background:#003CFD;color:#fff;box-shadow:0px 1px 5px 0 rgba(0,0,0,0.12),0px 2px 2px 0 rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.2)}
+.contained:hover{background:#1660D0}
+.outlined{background:transparent;color:#003CFD;box-shadow:inset 0 0 0 1px #003CFD}
+.text{background:transparent;color:#003CFD}
+.text:hover{background:rgba(0,60,253,0.04)}
+.disabled{background:rgba(21,23,35,0.12);color:rgba(21,23,35,0.38);box-shadow:none;cursor:not-allowed}
+.label{font:500 10px/1 var(--eco-font-mono);color:var(--eco-text-tertiary);min-width:80px}
+</style></head><body>
+<div class="row">
+  <span class="label">contained</span>
+  <button class="btn contained">Criar vaga</button>
+  <button class="btn contained">Salvar</button>
+  <button class="btn contained disabled">Disabled</button>
+</div>
+<div class="row">
+  <span class="label">outlined</span>
+  <button class="btn outlined">Cancelar</button>
+  <button class="btn outlined">Filtrar</button>
+</div>
+<div class="row">
+  <span class="label">text</span>
+  <button class="btn text">Ver detalhes</button>
+  <button class="btn text">Saiba mais</button>
+</div>
+<div class="row">
+  <span class="label">sizes</span>
+  <button class="btn contained sm">Small</button>
+  <button class="btn contained">Medium</button>
+  <button class="btn contained lg">Large</button>
+</div>
+</body></html>

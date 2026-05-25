@@ -1,0 +1,30 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>html,body{background:transparent;margin:0}body{padding:20px 24px;font-family:var(--eco-font-sans)}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.row + .row{margin-top:14px}
+.chip{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 12px;border-radius:100px;font:500 13px/1 var(--eco-font-sans);background:rgba(21,23,35,0.08);color:var(--eco-text-primary)}
+.chip.filled-primary{background:#003CFD;color:#fff}
+.chip.filled-success{background:#288636;color:#fff}
+.chip.filled-warn{background:#E4851C;color:#fff}
+.chip.filled-error{background:#BA121E;color:#fff}
+.chip.outlined{background:transparent;box-shadow:inset 0 0 0 1px rgba(21,23,35,0.23)}
+.chip.outlined-primary{background:transparent;color:#003CFD;box-shadow:inset 0 0 0 1px #003CFD}
+.chip .x{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;background:rgba(255,255,255,0.32);font:700 11px/1 var(--eco-font-mono);cursor:pointer}
+.chip.neutral .x{background:rgba(21,23,35,0.32);color:#fff}
+.label{font:500 10px/1 var(--eco-font-mono);color:var(--eco-text-tertiary);min-width:80px}
+</style></head><body>
+<div class="row"><span class="label">filled</span>
+  <span class="chip filled-primary">Cobalt</span>
+  <span class="chip filled-success">Aprovado</span>
+  <span class="chip filled-warn">Pendente</span>
+  <span class="chip filled-error">Reprovado</span>
+  <span class="chip neutral">Rascunho <span class="x">×</span></span>
+</div>
+<div class="row"><span class="label">outlined</span>
+  <span class="chip outlined">Remote</span>
+  <span class="chip outlined-primary">CLT</span>
+  <span class="chip outlined">Pleno</span>
+  <span class="chip outlined">São Paulo</span>
+  <span class="chip outlined">Inglês fluente</span>
+</div>
+</body></html>

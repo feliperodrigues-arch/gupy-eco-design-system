@@ -1,0 +1,54 @@
+/* Screen-specific styles for Gupy R&S kit */
+
+/* Login */
+.login-shell { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 40px 20px; position: relative; }
+.login-bg { position: absolute; inset: 0; background:
+    radial-gradient(1200px 600px at 12% 18%, rgba(0,60,253,0.10), transparent 60%),
+    radial-gradient(900px 500px at 90% 90%, rgba(204,79,40,0.10), transparent 60%),
+    var(--eco-bg-default); z-index: 0; }
+.login-card { position: relative; z-index: 1; width: 100%; max-width: 460px; background: var(--eco-bg-paper); border-radius: 8px; box-shadow: var(--eco-elev-8); padding: 40px 32px; display: flex; flex-direction: column; gap: 24px; }
+.login-header { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 12px; }
+.login-logo { width: 120px; }
+.login-header h1 { font: 700 24px/32px var(--eco-font-sans); margin: 0; }
+.login-header p { font: 400 14px/20px var(--eco-font-sans); color: var(--eco-text-secondary); margin: 0; }
+.login-form { display: flex; flex-direction: column; gap: 16px; }
+.login-form .eco-cb { margin: 2px 0 6px; }
+.login-links { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.login-links .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--eco-text-tertiary); }
+.login-footer { text-align: center; font: 400 12px/16px var(--eco-font-sans); color: var(--eco-text-tertiary); }
+
+/* Job directory */
+.job-toolbar { display: flex; gap: 12px; align-items: center; margin: 20px 0; }
+.job-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; }
+.job-card-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+.job-card-title { font: 600 18px/24px var(--eco-font-sans); color: var(--eco-text-primary); }
+.job-card-title:hover { color: var(--eco-brand-primary); cursor: pointer; }
+.job-card-sub { font: 400 13px/18px var(--eco-font-sans); color: var(--eco-text-secondary); margin-top: 4px; }
+.job-card-meta { display: flex; gap: 6px; margin-bottom: 14px; }
+.job-card-foot { display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--eco-border-subtle); }
+.job-card-owner { display: flex; align-items: center; gap: 8px; font: 500 13px/1 var(--eco-font-sans); color: var(--eco-text-secondary); }
+.job-card-stat { display: flex; align-items: center; gap: 6px; font: 400 13px/1 var(--eco-font-sans); color: var(--eco-text-primary); }
+.job-card-stat strong { font-weight: 700; }
+
+/* Back button */
+.back-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 100px; border: none; background: transparent; color: var(--eco-text-secondary); font: 500 13px/1 var(--eco-font-sans); cursor: pointer; margin-bottom: 16px; }
+.back-btn:hover { background: var(--eco-state-hover); color: var(--eco-text-primary); }
+
+/* Pipeline */
+.pipeline { display: flex; align-items: center; gap: 4px; padding: 16px 20px; background: #fff; border-radius: 8px; box-shadow: var(--eco-elev-1); margin-bottom: 24px; }
+.pipeline-stage { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 8px 0; border-radius: 6px; cursor: pointer; }
+.pipeline-stage:hover { background: var(--eco-state-hover); }
+.pipeline-count { font: 700 24px/28px var(--eco-font-sans); color: var(--eco-brand-primary); }
+.pipeline-label { font: 500 12px/16px var(--eco-font-sans); color: var(--eco-text-secondary); }
+.pipeline-arrow { color: var(--eco-text-tertiary); }
+
+.candidate-toolbar, .user-toolbar { display: flex; gap: 12px; align-items: center; margin: 20px 0; }
+
+/* Score bar */
+.score { display: flex; align-items: center; gap: 8px; min-width: 120px; }
+.score-bar { flex: 1; height: 6px; background: var(--eco-bluish-gray-100); border-radius: 100px; overflow: hidden; min-width: 80px; }
+.score-fill { height: 100%; background: var(--eco-brand-primary); border-radius: 100px; }
+.score span { font: 600 13px/1 var(--eco-font-mono); color: var(--eco-text-primary); min-width: 28px; text-align: right; }
+
+/* Alert margin */
+.eco-main > .eco-alert { margin-bottom: 20px; }

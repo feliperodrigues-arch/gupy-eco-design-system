@@ -1,0 +1,37 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../colors_and_type.css">
+<style>html,body{background:transparent;margin:0}body{padding:20px 24px;font-family:var(--eco-font-sans)}
+.row{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.row + .row{margin-top:16px}
+.av{display:inline-flex;align-items:center;justify-content:center;border-radius:50%;color:#fff;font:600 14px/1 var(--eco-font-sans);background:#003CFD}
+.av.sq{border-radius:8px}
+.av.xs{width:24px;height:24px;font-size:10px}
+.av.sm{width:32px;height:32px;font-size:12px}
+.av.md{width:40px;height:40px;font-size:14px}
+.av.lg{width:56px;height:56px;font-size:18px}
+.av.xl{width:72px;height:72px;font-size:24px}
+.stack{display:inline-flex}
+.stack .av{box-shadow:0 0 0 2px #fff;margin-left:-8px}
+.stack .av:first-child{margin-left:0}
+.label{font:500 10px/1 var(--eco-font-mono);color:var(--eco-text-tertiary);min-width:60px}
+</style></head><body>
+<div class="row"><span class="label">sizes</span>
+  <span class="av xs">RS</span>
+  <span class="av sm" style="background:#7D35F8">AR</span>
+  <span class="av md" style="background:#288636">LP</span>
+  <span class="av lg" style="background:#CC4F28">MV</span>
+  <span class="av xl" style="background:#1660D0">JC</span>
+</div>
+<div class="row"><span class="label">square</span>
+  <span class="av sq md">G</span>
+  <span class="av sq md" style="background:#7D35F8">E</span>
+  <span class="av sq md" style="background:#288636">P</span>
+</div>
+<div class="row"><span class="label">group</span>
+  <div class="stack">
+    <span class="av md">RS</span>
+    <span class="av md" style="background:#7D35F8">AR</span>
+    <span class="av md" style="background:#288636">LP</span>
+    <span class="av md" style="background:rgba(21,23,35,0.12);color:var(--eco-text-secondary)">+8</span>
+  </div>
+</div>
+</body></html>
